@@ -11,17 +11,17 @@ Szkole Nauk Humanistycznych i Dziennikarstwa w Poznaniu.
 Instalacja
 ----------
 
-Wejdź na github do [repozytorium projektu](https://github.com/sargo/quizr)
+Wejdź na github do [repozytorium projektu](https://github.com/sargo/quizr-flask)
 i stwórz forka.
 
 Następnie przygotuj virtualenv i sklonuj Twojego forka repozytorium:
 
 ```
 source /opt/python/2.7/bin/virtualenvwrapper.sh
-mkvirtualenv --python=/opt/python/2.7/bin/python quizr
+mkvirtualenv --python=/opt/python/2.7/bin/python quizr-flask
 cdvirtualenv
-git clone git@github.com:username/quizr.git
-cd quizr
+git clone git@github.com:username/quizr-flask.git
+cd quizr-flask
 pip install -r requirements.txt
 ```
 
@@ -31,9 +31,9 @@ Użycie
 Przygotowanie do pracy:
 
 ```
-workon quizr
+workon quizr-flask
 cdvirtualenv
-cd quizr
+cd quizr-flask
 ```
 
 Uruchomienie aplikacji:
@@ -76,6 +76,3 @@ Struktura CSV:
  * Pozostałe kolumny - możliwe odpowiedzi
  
 Aplikacja powinna posiadać testy jednostkowe.
-
-
-
