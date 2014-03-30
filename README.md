@@ -4,7 +4,7 @@ Quizr
 A quiz application. 
 
 This is only a skeleton for app that students have to made during postgraduate
-studies "Programowanie aplikacji internetowych" on Wyøsza Szko≥a Nauk 
-Humanistycznych i Dziennikarstwa (PoznaÒ, Poland).
+studies "Programowanie aplikacji internetowych" on Wy≈ºsza Szko≈Ça Nauk
+Humanistycznych i Dziennikarstwa (Pozna≈Ñ, Poland).
 
 
