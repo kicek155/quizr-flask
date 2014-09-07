@@ -9,6 +9,8 @@ import random
 import pdb
 from flask import Flask, session, request, render_template, redirect, url_for
 from time import time
+from distribution_example.csv_loader import get_question
+# from distribution_example.csv_loader import get_question
 
 
 # create app and initialize config
@@ -19,7 +21,6 @@ app.config.update(dict(
     SECRET_KEY='development key',
 ))
 app.config.from_envvar('QUIZR_SETTINGS', silent=True)
-
 
 @app.route('/', methods=['GET', 'POST'])
 def welcome_page():
@@ -81,9 +82,10 @@ def result_page():
 def _get_question():
     # if username:
     doned = session.get('doned')
-    with io.open('data/quiz.csv', mode='r', encoding='utf8') as f:
-        questions = f.read()
-        questions = questions.split('\n')
+    # with io.open('data/quiz.csv', mode='r', encoding='utf8') as f:
+    #     questions = f.read()
+    #     questions = questions.split('\n')
+    questions = get_question('data/quiz.csv')
     if not doned:
         session['doned'] = []
     random.seed(random.random())
