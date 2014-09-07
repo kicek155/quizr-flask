@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block content %}
+     <p>Pytanie {{ counter }}</p>
+     <p>{{ question }}</p>
+    <form method="POST">
+        {% for k,a in answers.items() %}
+           <label><input type='radio' value="{{ k }}" name="answer"/> {{ a }}</label><br/>
+            
+        {% endfor %}
+        <input type="submit" value="Następne" />
+    </form>
+{% endblock content %}

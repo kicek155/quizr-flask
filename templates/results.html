@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block content %}
+<link href="{{ url_for('static', filename='css/mytable.css') }}" 
+          media="all" rel="stylesheet" type="text/css" />
+    {% if results %}
+        <h1>Wyniki: {{ points }}/15</h1>
+        <table>
+            <tr>
+                <th>nr. pytania</th>
+                <th>Twoja odpowiedź</th>
+                <th>Poprawna odpowiedź</th>
+                <th>Czas</th>
+                <th>Liczba punktów</th>
+            </tr>
+        {% for c, r in results.items() %}
+            <tr>
+                <td>{{ c }}</td>
+                <td>{{ r['your'] }}</td>
+                <td>{{ r['correct'] }}</td>
+                <td>{{ r['time'] }}</td>
+                <td>{{ r['points'] }}</td>
+            </tr>
+        {% endfor %}
+        </table>
+    {% else %}
+        <h2>You are cheating!!</h2>
+    {% endif %}
+    <h3><a href="{{ url_for('welcome_page') }}">Spróbuj jeszcze raz!</a></h3>
+{% endblock content %}
